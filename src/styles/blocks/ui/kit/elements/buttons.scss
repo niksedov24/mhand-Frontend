@@ -20,12 +20,28 @@
             @include mobile {
                 padding: 1rem 1.25rem;
             }
+            img {
+                @include image_settings(contain);
+                width: 2.5rem;
+                height: 2.5rem;
+            }
         }
         &_small {
             padding: 0.5rem 1rem;
             @include button_2;
             @include mobile {
                 padding: 0.25rem 0.75rem;
+            }
+        }
+        &_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            img {
+                @include image_settings(contain);
+                width: 2.5rem;
+                height: 2.5rem;
             }
         }
     }
