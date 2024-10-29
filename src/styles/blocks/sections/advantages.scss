@@ -1,0 +1,18 @@
+.advantages-section{
+    
+    &__info-block{
+        grid-column: span 5;
+        &__bann{
+            .swiper{
+                .swiper-wrapper{
+                    .swiper-slide{
+                        img{
+                            @include image_settings(cover);
+                            border-radius: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

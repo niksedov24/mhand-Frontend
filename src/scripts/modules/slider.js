@@ -5,3 +5,12 @@ export function slider() {
         },
       });
 }
+
+new Swiper(".bannSlider", {
+  slidesPerView: 1.7,
+  spaceBetween: 21,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

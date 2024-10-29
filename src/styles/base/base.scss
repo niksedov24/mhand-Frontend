@@ -21,6 +21,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Golos Text", sans-serif;
+    background-color: $bg-inverse-subdued-3;
 }
 
 main {
@@ -59,10 +60,21 @@ input {
     outline: none;
 }
 .swiper-pagination {
+    padding: 0 1.75rem;
     bottom: 1.75rem!important;
+    gap: 0.333rem;
     display: flex;
     &-bullet{
         flex: 1;
+        border-radius: 0;
+        height: 0.125rem;
+        margin: 0!important;
+        background-color: $bg-inverse-transparent-15;
+        opacity: 1;
+        &-active{
+            background-color: $bg-inverse;
+        }
+    
     }
 
 }
