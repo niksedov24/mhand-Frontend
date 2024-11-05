@@ -24,14 +24,14 @@ body {
     background-color: $bg-inverse-subdued-3;
 }
 
-main {
-    max-width: 1921px;
-    margin: 0 auto;
-    @include desktop {
-        margin: 0;
-        max-width: none;
-    }
-}
+// main {
+//     max-width: 1921px;
+//     margin: 0 auto;
+//     @include desktop {
+//         margin: 0;
+//         max-width: none;
+//     }
+// }
 
 hr {
     margin: 0;
@@ -77,4 +77,12 @@ input {
     
     }
 
+}
+.pv{
+    &-30{
+        padding: 2.5rem 0;
+    }
+    &-60{
+        padding: 5rem 0;
+    }
 }
