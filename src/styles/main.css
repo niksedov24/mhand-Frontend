@@ -797,11 +797,10 @@ input::placeholder {
   overflow: hidden;
   border-radius: 2.5rem;
   grid-column: span 5;
-  background-color: yellow;
-  position: relative;
+  background-color: #FFE600;
   padding: 0 10rem;
   display: flex;
-  gap: 35px;
+  gap: 2.917rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -815,17 +814,17 @@ input::placeholder {
   gap: 1.25rem;
 }
 .bonus-program-section__head__info-block__background {
+  position: relative;
   display: flex;
 }
-.bonus-program-section__head__info-block__background__image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.bonus-program-section__head__info-block__background__phone {
   z-index: 3;
   width: 52rem;
 }
 .bonus-program-section__head__info-block__background__vector1 {
   position: absolute;
+  top: 2rem;
+  left: 0;
 }
 .bonus-program-section__head__info-block__background__vector2 {
   position: absolute;
@@ -853,6 +852,39 @@ input::placeholder {
   .bonus-program-section__head__info-block__description {
     font-size: 1.5rem;
   }
+}
+
+.brands-section__slider {
+  grid-column: 2/5;
+  position: relative;
+}
+.brands-section__slider .swiper .swiper-wrapper .swiper-slide {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.brands-section__slider .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.brands-section__slider .button.prev, .brands-section__slider .button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  cursor: pointer;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.brands-section__slider .button.prev.swiper-button-disabled, .brands-section__slider .button.next.swiper-button-disabled {
+  opacity: 0.5;
+}
+.brands-section__slider .button.prev {
+  left: -2.25rem;
+}
+.brands-section__slider .button.next {
+  right: -2.25rem;
 }
 
 /*# sourceMappingURL=main.css.map */

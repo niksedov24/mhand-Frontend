@@ -3,39 +3,37 @@
         overflow: hidden;
         border-radius: 2.5rem;
         grid-column: span 5;
-        background-color: yellow;
-        position: relative;
+        background-color: $bg-accent;
+        
         padding: 0 10rem;
         display: flex;
-        gap:35px;
+        gap: 2.917rem;
         justify-content: space-between;
         align-items: center;
         button{
             color: $text-primary;
             cursor: pointer;
-            
-            
         }
         
         &__info-block{
             &__background{
+                position: relative;
                 display: flex;
-                &__image{
-                    @include image_settings(contain);
+                &__phone{
                     z-index: 3;
                     width: 52rem;
                     
                 }
                 &__vector1{
                     position: absolute;
-
+                    top: 2rem;
+                    left: 0;
                 }
                 &__vector2{
                     position: absolute;
+                    
                    
                     }
-
-                
             }
             display: flex;
             flex-direction: column;
