@@ -11,6 +11,7 @@
             .swiper{
                 .swiper-wrapper{
                     .swiper-slide{
+                        height: auto;
                         border-radius: 2.5rem;
                         overflow: hidden;
                         img{
@@ -22,6 +23,11 @@
             }
             .button{
                 &.prev, &.next{
+                    @include mobile{
+                        top: auto;
+                        bottom: 1.5rem;
+                        transform: none;
+                    }
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
@@ -35,19 +41,34 @@
                 }   
                 &.prev{
                     left: -2.25rem;
+                    @include mobile{
+                        left: 1.75rem;
+                    }
                 }
                 &.next{
                     right: -2.25rem;
+                    @include mobile{
+                        right: 1.75rem;
+                    }
                 }
             }
         }
         &__additional{
-            
-            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            overflow-x: auto;
+            @include mobile {
+                display: flex;
+                flex-wrap: nowrap;
+               
+                
+            }
             @include grid(5, 1.75rem);
             font-size: 1.75rem;
             color: $text-primary;
             &__information{
+               
                 img{
                     position: absolute;
                     right: 0;
@@ -63,15 +84,25 @@
                 padding: 1.75rem 1.75rem 5.417rem;
                 background-color: $bg-primary;
                 border-radius: 1rem;
+                @include mobile{
+                    overflow: none;
+                    width: 18,5833rem;
+                    flex: none;
+                }
                 position: relative;
                 &__title{
                     padding-bottom: 1rem;
                     @include text_1;
                     font-weight: 500;
+                   
                 }  
                 &__description{
                     width: 60%;
                     color: $text-primary-transparent-60;
+                    @include mobile{
+                        width: 50%;
+                    }
+                   
                     
                 }
             }

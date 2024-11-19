@@ -285,6 +285,52 @@ input {
   flex: 1;
 }
 
+.burger-block {
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 35rem;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  .burger-block {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+.burger-block__burger {
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  body.open-menu {
+    overflow: hidden;
+  }
+}
+body.open-menu .burger-block {
+  opacity: 1;
+  visibility: visible;
+}
+
+.insert {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.insert.active {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(56, 56, 56, 0.3019607843);
+}
+
 .button {
   border-radius: 1rem;
   outline: none;
@@ -618,22 +664,43 @@ input::placeholder {
   color: rgba(56, 56, 56, 0.3019607843);
 }
 
-.header-section__container {
+header {
+  position: sticky;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+header .header-section {
+  width: 100%;
+}
+header .header-section__container {
   margin: 0 8.25rem;
 }
-.header-section__info-block {
+@media (max-width: 768px) {
+  header .header-section__container {
+    margin: 0;
+  }
+}
+header .header-section__info-block {
+  position: relative;
   grid-column: span 5;
   display: flex;
   flex-direction: column;
 }
-.header-section__info-block__item {
+header .header-section__info-block__item {
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
   width: 100%;
   padding: 1.75rem;
 }
-.header-section__info-block__item__item {
+@media (max-width: 768px) {
+  header .header-section__info-block__item {
+    gap: 0.75rem;
+  }
+}
+header .header-section__info-block__item__item {
   flex: 1;
   display: flex;
   align-items: center;
@@ -642,56 +709,85 @@ input::placeholder {
   padding: 0;
   list-style: none;
 }
-.header-section__info-block__item__search .input {
+@media (max-width: 768px) {
+  header .header-section__info-block__item__item:nth-child(1) {
+    flex: none;
+  }
+}
+@media (max-width: 768px) {
+  header .header-section__info-block__item__search {
+    display: none;
+  }
+}
+header .header-section__info-block__item__search .input {
   width: 100%;
 }
-.header-section__info-block__item__burger-logo {
+header .header-section__info-block__item .search-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  header .header-section__info-block__item .search-mobile {
+    display: block;
+  }
+}
+header .header-section__info-block__item__burger-logo {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.header-section__info-block__item__burger-logo__burger {
+header .header-section__info-block__item__burger-logo__burger {
   width: 4.5rem;
   height: 4.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  cursor: pointer;
 }
-.header-section__info-block__item__burger-logo__burger span {
+header .header-section__info-block__item__burger-logo__burger span {
   width: 2rem;
   height: 0.167rem;
   background-color: #383838;
   border-radius: 1000rem;
   pointer-events: none;
 }
-.header-section__info-block__item__burger-logo__logo {
+header .header-section__info-block__item__burger-logo__logo {
   height: 4.5rem;
 }
-.header-section__info-block__item__burger-logo__logo img {
+header .header-section__info-block__item__burger-logo__logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.header-section__info-block__item__add {
+header .header-section__info-block__item__add {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 0.5rem;
 }
-.header-section__info-block__item__add__link {
+@media (max-width: 768px) {
+  header .header-section__info-block__item__add {
+    gap: 0.75rem;
+  }
+}
+header .header-section__info-block__item__add__link {
   width: 4.5rem;
   height: 4.5rem;
   padding: 1rem;
 }
-.header-section__info-block__item__add__link img {
+header .header-section__info-block__item__add__link img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.header-section__info-block__item:nth-child(2) {
+header .header-section__info-block__item:nth-child(2) {
   border-radius: 0 0 1.75rem 1.75rem;
 }
-.header-section__info-block__item:nth-child(2) li a {
+@media (max-width: 768px) {
+  header .header-section__info-block__item:nth-child(2) {
+    display: none;
+  }
+}
+header .header-section__info-block__item:nth-child(2) li a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -701,27 +797,40 @@ input::placeholder {
   letter-spacing: -0.002em;
 }
 @media (max-width: 768px) {
-  .header-section__info-block__item:nth-child(2) li a {
+  header .header-section__info-block__item:nth-child(2) li a {
     font-size: 1.25rem;
   }
 }
-.header-section__info-block__item:nth-child(2) li a img {
+header .header-section__info-block__item:nth-child(2) li a img {
   width: 1.75rem;
   height: 1.75rem;
   object-fit: contain;
 }
-.header-section__info-block__item:nth-child(2) li a span {
+header .header-section__info-block__item:nth-child(2) li a span {
   color: rgba(56, 56, 56, 0.6);
 }
-.header-section__info-block__item__categories {
+header .header-section__info-block__item__categories {
   justify-content: center;
   flex: 1.5;
 }
-.header-section__info-block__item__categories li a span {
+header .header-section__info-block__item__categories li a span {
   color: #383838 !important;
 }
-.header-section__info-block__item__bonuses {
+header .header-section__info-block__item__bonuses {
   justify-content: flex-end;
+}
+
+body.open-menu header .header-section__info-block__item__burger-logo__burger span {
+  position: absolute;
+}
+body.open-menu header .header-section__info-block__item__burger-logo__burger span:nth-child(1) {
+  transform: rotate(45deg);
+}
+body.open-menu header .header-section__info-block__item__burger-logo__burger span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+body.open-menu header .header-section__info-block__item__burger-logo__burger span:nth-child(3) {
+  display: none;
 }
 
 .advantages-section__info-block {
@@ -734,6 +843,7 @@ input::placeholder {
   position: relative;
 }
 .advantages-section__info-block__bann .swiper .swiper-wrapper .swiper-slide {
+  height: auto;
   border-radius: 2.5rem;
   overflow: hidden;
 }
@@ -751,21 +861,48 @@ input::placeholder {
   width: 4.5rem;
   height: 4.5rem;
 }
+@media (max-width: 768px) {
+  .advantages-section__info-block__bann .button.prev, .advantages-section__info-block__bann .button.next {
+    top: auto;
+    bottom: 1.5rem;
+    transform: none;
+  }
+}
 .advantages-section__info-block__bann .button.prev.swiper-button-disabled, .advantages-section__info-block__bann .button.next.swiper-button-disabled {
   opacity: 0.5;
 }
 .advantages-section__info-block__bann .button.prev {
   left: -2.25rem;
 }
+@media (max-width: 768px) {
+  .advantages-section__info-block__bann .button.prev {
+    left: 1.75rem;
+  }
+}
 .advantages-section__info-block__bann .button.next {
   right: -2.25rem;
 }
+@media (max-width: 768px) {
+  .advantages-section__info-block__bann .button.next {
+    right: 1.75rem;
+  }
+}
 .advantages-section__info-block__additional {
+  overflow-x: auto;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1.75rem;
   font-size: 1.75rem;
   color: #383838;
+}
+.advantages-section__info-block__additional::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 768px) {
+  .advantages-section__info-block__additional {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 .advantages-section__info-block__additional__information {
   font-size: 1.25rem;
@@ -793,6 +930,13 @@ input::placeholder {
 .advantages-section__info-block__additional__information_yellow {
   background-color: #FFE600;
 }
+@media (max-width: 768px) {
+  .advantages-section__info-block__additional__information {
+    overflow: none;
+    width: 18, 5833rem;
+    flex: none;
+  }
+}
 .advantages-section__info-block__additional__information__title {
   padding-bottom: 1rem;
   font-size: 1.75rem;
@@ -809,6 +953,11 @@ input::placeholder {
 .advantages-section__info-block__additional__information__description {
   width: 60%;
   color: rgba(56, 56, 56, 0.6);
+}
+@media (max-width: 768px) {
+  .advantages-section__info-block__additional__information__description {
+    width: 50%;
+  }
 }
 
 .new-product-section__head {
