@@ -144,6 +144,12 @@ header{
 
 body.open-menu{
     header{
+        .header-section__info-block__item{
+            border-radius: 0 0 1.75rem 0;
+        }
+        .main{
+            border-radius: 0;
+        }
         .header-section__info-block__item__burger-logo__burger{
             span{
                     position: absolute;

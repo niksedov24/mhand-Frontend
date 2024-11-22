@@ -6,13 +6,145 @@
     position: absolute;
     background-color: $bg-primary;
     width: 35rem;
-    z-index: 5;
+    z-index: 7;
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
 
     &__burger{
+        &__info{
+            // display: flex;
+            @include mobile{
+                display: flex;
+            }
+            display: none;
+            flex-direction: column;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                list-style: none;
+                padding: 0 0 0 21px;
+                @include text_2;
+                img{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+               li{
+                a {
+                    color: $text-primary;
+                 }
+               }
+               
+            }
+            
+        }
+        &__bonuses{
+            display: none;
+            @include mobile{
+                display: flex;
+            }
+            // display: flex;
+            flex-direction: column;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+                list-style: none;
+                padding: 0 0 0 21px;
+                
+                @include text_1;
+                
+               li{
+                a {
+                    color: $text-primary;
+                 }
+               }
+               
+            }
+        }
+        &__contact-us{
+            &__descriptions{
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+                list-style: none;
+                padding: 0 0 0 21px;
+                @include mobile{
+                    gap: 0.25rem;
+                }
+                span{ 
+                    
+                    @include text_3;
+                    color: $text-primary-transparent-30;
+                }
+            }
+            &__politics{
+                @include mobile{
+                    flex-direction: row;
+                }
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+                list-style: none;
+                padding: 0 0 0 21px;
+                a{ 
+                    gap: 1.25rem;
+                    @include text_3;
+                    color: $text-primary-transparent-60;
+                }
+            }
+            padding-top: 2rem;
+            display: flex;
+            gap: 1.25rem;
+             flex-direction: column;
+             &__phone-socials{
+                display: flex;
+                gap: 1.25rem;
+                flex-direction: column;
+                list-style: none;
+                padding: 0 0 0 21px;
+                &__phone{
+                    
+                    a{
+                        @include text_2;
+                        color: $text-primary;
+                    }
+                }
+                &__socials{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                }
+            }
+        }
         overflow-y: auto;
+        height: 57.083rem;
+        @include mobile {
+            height: 100vh;
+            overflow-y: auto;
+        }
+        &__links{
+            display: flex;
+            flex-direction: column;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+                list-style: none;
+                padding: 0 0 0 21px;
+                
+                @include text_1;
+                
+               li{
+                a {
+                    color: $text-primary;
+                 }
+               }
+               
+            }
+            
+        }
     }
 }
 
@@ -24,11 +156,12 @@ body.open-menu {
     .burger-block{
         opacity: 1;
         visibility: visible;
-        
+        border-radius: 0 0 2rem 2rem;
     }
 }
 
 .insert {
+    
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -45,3 +178,4 @@ body.open-menu {
         
     }
 }
+
