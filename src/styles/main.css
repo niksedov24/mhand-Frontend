@@ -116,11 +116,21 @@ input {
   gap: 1.75rem;
   transition: all 0.3s;
 }
+@media (max-width: 768px) {
+  .product-card {
+    gap: 1.25rem;
+  }
+}
 .product-card:hover {
   padding: 0.5rem;
   margin-bottom: -10rem;
   transform: translateY(-2rem);
   box-shadow: 0px 0px 9px 0px rgba(56, 56, 26, 0.2);
+}
+@media (max-width: 768px) {
+  .product-card:hover {
+    margin-bottom: -2rem;
+  }
 }
 .product-card:hover .product-card__buttons {
   visibility: visible;
@@ -164,6 +174,11 @@ input {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  .product-card__information__price-block {
+    flex-wrap: wrap;
+  }
 }
 .product-card__information__price-block__price {
   font-size: 1.75rem;
@@ -445,7 +460,6 @@ input {
 }
 @media (max-width: 768px) {
   .burger-block__burger {
-    height: 100vh;
     overflow-y: auto;
   }
 }
@@ -1142,6 +1156,14 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .new-product-section__head {
+    grid: 10.0833rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    margin-bottom: 3rem;
+  }
+}
 .new-product-section__head__title {
   font-size: 3.5rem;
   font-weight: 500;
@@ -1171,12 +1193,30 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1.75rem;
 }
+@media (max-width: 768px) {
+  .new-product-section__info-block {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem;
+    grid-column: span 5;
+  }
+  .new-product-section__info-block :nth-child(5) {
+    display: none;
+  }
+}
 
 .products-home-section__info-block {
   grid-column: span 5;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1.75rem;
+}
+@media (max-width: 768px) {
+  .products-home-section__info-block {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem;
+  }
 }
 
 .bonus-program-section__head {
@@ -1248,6 +1288,11 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
   grid-column: 2/5;
   position: relative;
 }
+@media (max-width: 768px) {
+  .brands-section__slider {
+    grid-column: 1/5;
+  }
+}
 .brands-section__slider .swiper .swiper-wrapper .swiper-slide {
   background-color: #FFFFFF;
   border-radius: 1rem;
@@ -1273,12 +1318,32 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
 .brands-section__slider .button.prev {
   left: -2.25rem;
 }
+@media (max-width: 768px) {
+  .brands-section__slider .button.prev {
+    left: -10rem;
+    display: none;
+  }
+}
 .brands-section__slider .button.next {
   right: -2.25rem;
 }
+@media (max-width: 768px) {
+  .brands-section__slider .button.next {
+    right: -10rem;
+    display: none;
+  }
+}
 
+.footer-section {
+  width: 100%;
+}
 .footer-section__container {
   margin: 0 8.25rem;
+}
+@media (max-width: 768px) {
+  .footer-section__container {
+    margin: 0;
+  }
 }
 .footer-section__info-block {
   background-color: #FFFFFF;
@@ -1434,6 +1499,11 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+@media (max-width: 768px) {
+  .footer-section__info-block__other {
+    grid-column: 2/10;
+  }
 }
 .footer-section__info-block__other__links {
   display: flex;

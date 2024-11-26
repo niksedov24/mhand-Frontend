@@ -22,7 +22,7 @@ new Swiper(".bannSlider", {
 });
 
 new Swiper(".brandsSlider", {
-  slidesPerView: 5,
+  slidesPerView: 3,
   spaceBetween: 21,
   loop:true,
   navigation: {

@@ -1,7 +1,11 @@
 .products-home-section{
     &__info-block{
         grid-column: span 5;
-        @include grid(5,1.75rem)
+        @include grid(5,1.75rem);
+        @include mobile{
+            @include grid(2,0.25rem);
+            
+        }
         
     }
 }
