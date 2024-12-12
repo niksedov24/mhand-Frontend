@@ -2,6 +2,9 @@
     &__slider{
         grid-column: 2/5;
         position: relative;
+        @include mobile {
+            grid-column: 1/5;
+        }
             .swiper{
                 .swiper-wrapper{
                     .swiper-slide{
@@ -24,15 +27,28 @@
                     cursor: pointer;
                     width: 4.5rem;
                     height: 4.5rem;  
+                    
                     &.swiper-button-disabled {
                         opacity: 0.5;
                     }
                 }   
                 &.prev{
+                   
                     left: -2.25rem;
+                    @include mobile {
+                        left: -10rem;
+                        display: none;
+                    }
                 }
                 &.next{
+                    
                     right: -2.25rem;
+                    @include mobile{
+                        right: -10rem;
+                        display: none;
+                    }
+                        
+                   
                 }
             }
     }

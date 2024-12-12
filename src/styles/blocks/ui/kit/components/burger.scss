@@ -121,7 +121,7 @@
         overflow-y: auto;
         height: 57.083rem;
         @include mobile {
-            height: 100vh;
+            
             overflow-y: auto;
         }
         &__links{

@@ -1,12 +1,18 @@
+
 .footer-section{
+    width: 100%;
    &__container{
        margin: 0 8.25rem;
+       @include mobile {
+        margin: 0;
+    }
    }
     &__info-block{
         background-color: $bg-primary;
         border-radius: 1.5rem 1.5rem 0 0;
         grid-column: span 5;
         padding: 5rem;
+        
         display: grid;
         @include grid(9,1.25rem);  
         &__mailing-social{
@@ -101,6 +107,9 @@
             }
         }
         &__other{
+            @include mobile{
+                grid-column: 2/10;
+            }
             grid-column: 5/10;
             display: flex;
             justify-content: space-between;

@@ -2,6 +2,12 @@
     
     &__head{
         grid-column: span 5;
+        @include mobile{
+            grid: 10.0833rem;
+            margin-left: 1.25rem;
+            margin-right: 1.25rem;
+            margin-bottom: 3rem;
+        }
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -17,7 +23,16 @@
     }
     &__info-block{
         grid-column: span 5;
-        @include grid(5,1.75rem)
+        
+        @include grid(5,1.75rem);
+        @include mobile{
+            @include grid(2, 0.25rem);
+            grid-column: span 5;
+            :nth-child(5) {
+                display: none;
+            }
+        }
+        
 
     }
 }
