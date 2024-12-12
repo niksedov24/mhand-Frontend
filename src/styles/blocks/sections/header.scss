@@ -5,6 +5,7 @@ header{
     left: 0;
     z-index: 5;
     
+    
     .header-section {
         width: 100%;
         &__container{
@@ -24,21 +25,24 @@ header{
                 @include mobile {
                     gap: 0.75rem;
                 }
+
                 background-color: $bg-primary;
                 display: flex;
                 align-items: center;
                 width: 100%;
                 padding: 1.75rem;
+                @include mobile_small{
+                    padding: 1.25rem;
+                }
                 &__item {
                     flex: 1;
                     &:nth-child(1){
                         @include mobile {
                             flex: none;
-                            padding: 1.25rem;
-                        }
-                        @include mobile_small{
-                            padding: 0;
-                        }
+                        
+                        };
+                        
+                       
                     }
                     display: flex;
                     align-items: center;
@@ -99,6 +103,11 @@ header{
                         width: 4.5rem;
                         height: 4.5rem;
                         padding: 1rem;
+                        @include mobile_small{
+                            padding: 0;
+                            width: 2rem;
+                            height: 2rem;
+                        }
                         img {
                             @include image_settings(contain);
                         }
