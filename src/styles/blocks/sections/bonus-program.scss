@@ -9,11 +9,19 @@
         gap: 2.917rem;
         justify-content: space-between;
         align-items: center;
+        
         button{
             color: $text-primary;
             cursor: pointer;
+            @include mobile {
+                position: absolute;
+                
+            }
         }
-        
+        @include mobile{
+            padding: 0 2rem;
+            flex-direction: column;
+        }
         &__info-block{
             &__background{
                 position: relative;
@@ -40,8 +48,14 @@
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
+            @include mobile {
+                gap: 1rem;
+            }
             &__title{
                 @include heading_2;
+                @include mobile{
+                    font-size: 2.5rem;
+                }
                 
             }
             &__description{
@@ -51,6 +65,18 @@
                 color: $text-primary;
                 
             }
+        }
+    }
+    .phone__mobile{
+        display: none;
+        @include mobile {
+            display: block;
+            width: 28.583rem;
+        }
+    }
+    .phone__desktop{
+        @include mobile {
+            display: none;
         }
     }
 }
