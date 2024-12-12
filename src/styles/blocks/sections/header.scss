@@ -86,6 +86,7 @@ header{
                     }
                     &__logo {
                         height: 4.5rem;
+                        
                         img {
                             @include image_settings(contain);
                         }

@@ -88,8 +88,18 @@ input {
 .pv-30 {
   padding: 2.5rem 0;
 }
+@media (max-width: 768px) {
+  .pv-30 {
+    padding: 0;
+  }
+}
 .pv-60 {
   padding: 5rem 0;
+}
+@media (max-width: 768px) {
+  .pv-60 {
+    padding: 2rem 0;
+  }
 }
 
 .none {

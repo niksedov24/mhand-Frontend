@@ -82,11 +82,15 @@ input {
 .pv{
     &-30{
         padding: 2.5rem 0;
-        
+        @include mobile{
+            padding: 0;
+        }  
     }
     &-60{
         padding: 5rem 0;
-       
+       @include mobile {
+        padding: 2rem 0;
+       }
     }
 }
 .none {
