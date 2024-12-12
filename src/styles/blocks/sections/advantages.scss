@@ -88,9 +88,10 @@
                 background-color: $bg-primary;
                 border-radius: 1rem;
                 @include mobile{
-                    overflow: none;
+                    overflow: hidden;
                     width: 18.5833rem;
                     flex: none;
+                    
                 }
                 position: relative;
                 &__title{
