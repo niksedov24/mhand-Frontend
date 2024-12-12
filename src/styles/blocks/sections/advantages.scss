@@ -5,6 +5,9 @@
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
+        @include mobile {
+            gap: 2rem;
+        }
         
         &__bann{
             position: relative;

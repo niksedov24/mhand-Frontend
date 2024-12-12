@@ -92,6 +92,10 @@ input {
   padding: 5rem 0;
 }
 
+.none {
+  display: none;
+}
+
 .container {
   margin: 0 10rem;
   display: grid;
@@ -896,6 +900,12 @@ header .header-section__info-block__item__item {
 @media (max-width: 768px) {
   header .header-section__info-block__item__item:nth-child(1) {
     flex: none;
+    padding: 1.25rem;
+  }
+}
+@media (max-width: 520px) {
+  header .header-section__info-block__item__item:nth-child(1) {
+    padding: 0;
   }
 }
 @media (max-width: 768px) {
@@ -1028,6 +1038,11 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+@media (max-width: 768px) {
+  .advantages-section__info-block {
+    gap: 2rem;
+  }
 }
 .advantages-section__info-block__bann {
   position: relative;
