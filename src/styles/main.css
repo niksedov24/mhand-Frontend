@@ -1249,6 +1249,7 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
 
 .bonus-program-section__head {
   overflow: hidden;
+  position: relative;
   border-radius: 2.5rem;
   grid-column: span 5;
   background-color: #FFE600;
@@ -1265,6 +1266,9 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
 @media (max-width: 768px) {
   .bonus-program-section__head button {
     position: absolute;
+    bottom: 2rem;
+    z-index: 99;
+    width: 315px;
   }
 }
 @media (max-width: 768px) {
@@ -1277,6 +1281,11 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+@media (max-width: 768px) {
+  .bonus-program-section__head__info-block {
+    padding: 2rem 2rem 0 2rem;
+  }
 }
 .bonus-program-section__head__info-block__background {
   position: relative;
@@ -1292,11 +1301,26 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
   top: 3.5rem;
   left: 0;
 }
+@media (max-width: 768px) {
+  .bonus-program-section__head__info-block__background__vector1 {
+    width: 16.536rem;
+    top: 3.5rem;
+    left: -4rem;
+    transform: rotate(358deg);
+  }
+}
 .bonus-program-section__head__info-block__background__vector2 {
   width: 13.585rem;
   position: absolute;
   top: 3.5rem;
   right: 2.5rem;
+}
+@media (max-width: 768px) {
+  .bonus-program-section__head__info-block__background__vector2 {
+    width: 7.75rem;
+    right: 0.5rem;
+    top: 2.5rem;
+  }
 }
 @media (max-width: 768px) {
   .bonus-program-section__head__info-block {
@@ -1418,6 +1442,12 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
   grid-template-columns: repeat(9, minmax(0, 1fr));
   gap: 1.25rem;
 }
+@media (max-width: 768px) {
+  .footer-section__info-block {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .footer-section__info-block__mailing-social {
   grid-column: span 3;
   grid-row: span 2;
@@ -1425,15 +1455,30 @@ body.open-menu header .header-section__info-block__item__burger-logo__burger spa
   flex-direction: column;
   gap: 5rem;
 }
+@media (max-width: 768px) {
+  .footer-section__info-block__mailing-social {
+    gap: 3rem;
+  }
+}
 .footer-section__info-block__mailing-social__mailing {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
+@media (max-width: 768px) {
+  .footer-section__info-block__mailing-social__mailing {
+    gap: 1.75rem;
+  }
+}
 .footer-section__info-block__mailing-social__mailing__head {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  .footer-section__info-block__mailing-social__mailing__head {
+    gap: 0.75rem;
+  }
 }
 .footer-section__info-block__mailing-social__mailing__head__title {
   font-size: 2.5rem;

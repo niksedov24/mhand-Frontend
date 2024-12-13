@@ -1,6 +1,7 @@
 .bonus-program-section{ 
     &__head{
         overflow: hidden;
+        position: relative;
         border-radius: 2.5rem;
         grid-column: span 5;
         background-color: $bg-accent;
@@ -15,6 +16,12 @@
             cursor: pointer;
             @include mobile {
                 position: absolute;
+                bottom: 2rem;
+                z-index: 99;
+                width: 315px;
+               
+                
+               
                 
             }
         }
@@ -23,6 +30,9 @@
             flex-direction: column;
         }
         &__info-block{
+            @include mobile {
+                padding: 2rem 2rem 0 2rem;
+            }
             &__background{
                 position: relative;
                 display: flex;
@@ -36,13 +46,24 @@
                     position: absolute;
                     top: 3.5rem;
                     left: 0;
+                    @include mobile {
+                        width: 16.536rem;
+                        top: 3.5rem;
+                        left: -4rem;
+                        transform: rotate(358deg);
+                        
+                    }
                 }
                 &__vector2{
                     width: 13.585rem;
                     position: absolute;
                     top: 3.5rem;
                     right: 2.5rem;
-                   
+                   @include mobile{
+                    width: 7.75rem;
+                    right: .5rem;
+                    top: 2.5rem;
+                   }
                     }
             }
             display: flex;
