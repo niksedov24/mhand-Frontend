@@ -329,9 +329,6 @@ input {
     height: 100vh;
   }
 }
-.burger-block__burger {
-  overflow-y: auto;
-}
 .burger-block__burger__info {
   display: none;
   flex-direction: column;
@@ -470,11 +467,6 @@ input {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-}
-@media (max-width: 768px) {
-  .burger-block__burger {
-    overflow-y: auto;
-  }
 }
 .burger-block__burger__links {
   display: flex;
