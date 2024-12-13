@@ -12,6 +12,10 @@
     transition: all .3s;
 
     &__burger{
+        width: 100%;
+        overflow-y: auto;
+        max-height: 600px; 
+        height: 100%;
         &__info{
             // display: flex;
             @include mobile{
@@ -120,13 +124,11 @@
             }
         }
         
-        overflow-y: auto;
-        height: 41.667rem;
         @include mobile_small{
-            overflow-y: auto;
+            
         }
         @include mobile {
-            overflow-y: auto;   
+            
         }
         
         &__links{
@@ -166,7 +168,7 @@ body.open-menu {
 }
 
 .insert {
-    
+  
     width: 100vw;
     height: 100vh;
     position: fixed;
