@@ -331,7 +331,7 @@ input {
 }
 .burger-block__burger {
   overflow-y: auto;
-  max-height: 41.667rem;
+  height: 41.667rem;
 }
 .burger-block__burger__info {
   display: none;

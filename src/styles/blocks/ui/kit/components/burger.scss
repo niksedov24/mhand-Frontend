@@ -121,7 +121,7 @@
         }
         
         overflow-y: auto;
-        max-height: 41.667rem;
+        height: 41.667rem;
         @include mobile_small{
             overflow-y: auto;
         }
