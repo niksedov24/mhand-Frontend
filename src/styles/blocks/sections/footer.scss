@@ -94,13 +94,33 @@
             
             grid-column: 5/10;
             @include grid(5,5rem);
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+            }   
             
             &__item{
                 display: flex;
                 flex-direction: column;
                 gap: 1.25rem;
+                position: relative;
                 &__title{
                     @include button_2;
+                    &::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background-image: url(/src/images/left.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 20px;
+                        height: 20px;
+                        transform: rotate(-90deg);
+                        
+                    }
                 }
                 ul{
                     padding: 0;
@@ -109,6 +129,9 @@
                     display: flex;
                     flex-direction: column;
                     gap: 1.25rem;
+                    @include mobile {
+                        display: none;
+                    }
                     li{
                         color: $text-primary-transparent-60;
                         @include text_2;
@@ -121,7 +144,8 @@
         }
         &__other{
             @include mobile{
-                grid-column: 2/10;
+                flex-direction: column;
+                gap: 1.25rem;
             }
             grid-column: 5/10;
             display: flex;
@@ -142,6 +166,11 @@
                 text-align: right;
                 display: flex;
                 flex-direction: column;
+                @include mobile {
+                    text-align: left;
+                    gap: 0.25rem;
+                    align-items: flex-end;
+                }
                 gap: 0.5rem;
                 a{
                     color: $text-primary-transparent-30;
@@ -149,4 +178,28 @@
             }
         }
     }
+}
+
+.mobile__none{
+    display: none;
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+}
+
+.open{
+    @include mobile {
+        display: flex!important;
+    }
+}
+.footer-section__info-block__menu__item__title::after{
+    display: none;
+    @include mobile {
+        display: block;
+    }
+}
+.footer-section__info-block__menu__item__title.active::after{
+    transform: translateY(-50%) rotate(90deg);
 }
